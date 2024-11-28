@@ -36,7 +36,7 @@ except Exception as error:  # pylint: disable=broad-except
     app.logger.critical("%s: Cannot continue", error)
     # gunicorn requires exit code 4 to stop spawning workers when they die
     sys.exit(4)
-    
+
 talisman = Talisman(app)
 CORS(app)
 
